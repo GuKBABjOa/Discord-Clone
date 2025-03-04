@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <ClerkProvider>
         <body
           className={cn(font.className,
             "bg-white dark:bg-[#313338]"
@@ -33,7 +33,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </body>
-      </html>
-    </ClerkProvider>
+      </ClerkProvider>
+    </html>
   );
 }
